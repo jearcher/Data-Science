@@ -1,0 +1,44 @@
+# Copy in old yaml file
+cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/project-2-jearcher/
+
+# Copy in new YAML file (week 07)
+cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml ~/w205/project-2-jearcher/
+
+# Make sure in right directory 
+cd ~/w205/project-2-jearcher/
+
+# Spin up cluster
+docker-compose up -d
+
+# Start the log file in 2nd command line (kafka mirror)
+docker-compose logs -f kafka
+
+# Create a topic called 'assessments'
+docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+
+# Check/describe the topic
+docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+
+# Publish messages to topic with kafka console producer (Change filename)
+
+docker-compose exec mids bash -c "cat /w205/project-2-jearcher/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments "
+
+# Consume messages:
+docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+
+
+# (Alternate way to consume messages) Consume Messages
+docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic assessments --from-beginning --max-messages 3280
+
+# PySpark code modify it to work with assessments
+See notebook
+
+
+
+
+# Close it down
+docker-compose down
+docker-compose ps
+docker ps -a
+
+

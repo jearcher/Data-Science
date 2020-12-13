@@ -1,0 +1,35 @@
+jupyter url
+-Replace '0.0.0.0' with External IP, recall this changes every time the VM stops and restarts
+- Open in Chrome incognito window to avoid cookie conflicts
+- In command line:
+
+# EVERY TIME
+docker-compose down
+docker-compose up -d
+docker-compose exec spark bash
+
+# In Spark
+ln -s /w205 w205
+exit
+
+docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+
+
+
+Oct 26th:
+http://34.83.65.88:8888/?token=81d993606a83b360aacf20365a26dd1daad1dc3117374dac
+
+http://34.83.65.88:8888/?token=2775cb0c74a4a3c02dc6d61f9b1d46056f798486c14ea27e
+http://34.83.65.88:8888/?token=e5c8e4b92d03a43868a493b96196bd981ca8f191b9e132b7
+
+
+oct19th 2pm: 
+http://34.82.188.101:8888/?token=55311f8aec43c2a7daefcac76cbb7f960f85c1c168f3421b
+
+oct19th 8pm: 
+http://34.82.188.101:8888/?token=c2b6e5f2c6c78559fc5f498906b30571318737ee18315060
+
+oct 19th 8pm:
+http://34.82.188.101:8888/?token=f3dd4525034829e4812ccc2cd84a4dcf7c7a3c9cfc837b64
+
+http://34.82.188.101:8888/?token=0443f2ad233b1cc08e68a4c8032839468b59e30db34c2e02
