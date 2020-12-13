@@ -1,0 +1,5 @@
+derby.log
+metastore_db/
+project_3_commands.txt
+.ipynb_checkpoints/
+game_api.pyc

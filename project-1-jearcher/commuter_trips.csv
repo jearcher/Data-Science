@@ -1,0 +1,21 @@
+start_station_name,end_station_name,commute_time,trip_freq
+2nd at Townsend,Harry Bridges Plaza (Ferry Building),Evening Commute,4456
+Embarcadero at Sansome,Steuart at Market,Evening Commute,4282
+Embarcadero at Folsom,San Francisco Caltrain (Townsend at 4th),Evening Commute,4180
+Harry Bridges Plaza (Ferry Building),2nd at Townsend,Morning Commute,4028
+San Francisco Caltrain 2 (330 Townsend),Townsend at 7th,Morning Commute,3845
+Harry Bridges Plaza (Ferry Building),Embarcadero at Sansome,Morning Commute,3706
+2nd at South Park,Market at Sansome,Evening Commute,3573
+Steuart at Market,San Francisco Caltrain (Townsend at 4th),Evening Commute,3567
+Market at 10th,San Francisco Caltrain 2 (330 Townsend),Evening Commute,3521
+Steuart at Market,2nd at Townsend,Morning Commute,3517
+Market at Sansome,2nd at South Park,Morning Commute,3491
+Temporary Transbay Terminal (Howard at Beale),San Francisco Caltrain (Townsend at 4th),Evening Commute,3451
+Harry Bridges Plaza (Ferry Building),Embarcadero at Sansome,,3383
+Townsend at 7th,San Francisco Caltrain 2 (330 Townsend),Evening Commute,3324
+Steuart at Market,Embarcadero at Sansome,Morning Commute,3015
+Howard at 2nd,San Francisco Caltrain (Townsend at 4th),Evening Commute,2939
+Mountain View Caltrain Station,Mountain View City Hall,Morning Commute,2782
+Townsend at 7th,Civic Center BART (7th at Market),Evening Commute,2678
+2nd at Townsend,Steuart at Market,Evening Commute,2582
+Townsend at 7th,San Francisco Caltrain (Townsend at 4th),Evening Commute,2566
